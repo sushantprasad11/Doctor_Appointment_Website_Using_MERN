@@ -1,0 +1,24 @@
+{
+  "name": "doctor-appointment-telemedicine",
+  "version": "1.0.0",
+  "description": "Production-grade Doctor Appointment & Telemedicine Platform — MERN Stack",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "server:dev": "cd server && npm run dev",
+    "client:dev": "cd client && npm run dev",
+    "server:start": "cd server && npm start",
+    "build": "cd client && npm run build",
+    "render:build": "npm install --prefix server && npm install --prefix client && npm run build",
+    "start": "cd server && node server.js",
+    "seed:admin": "cd server && node seeds/adminSeed.js",
+    "seed:demo": "cd server && node seeds/demoSeed.js",
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
